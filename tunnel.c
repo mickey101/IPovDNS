@@ -345,6 +345,7 @@ int main(int argc, char *argv[]) {
   }
   
   /* use select() to handle two descriptors at once */
+  /* use libevent for descriptors */
   /* tap_fd is for the tap/tun interface where as net_fd is for the network */
    maxfd = (tap_fd > net_fd)?tap_fd:net_fd;
 
